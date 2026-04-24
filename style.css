@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Clash" ;
+    src: url(fonts/ClashDisplay-Bold.ttf);
+    font-weight: 800;
+}
+
+@font-face{
+    font-family: "Clash";
+    src: url(fonts/ClashDisplay-Medium.ttf);
+    font-weight: 600;
+}
+
+@font-face{
+    font-family: "Clash";
+    src: url(fonts/ClashDisplay-Regular.ttf);
+    font-weight: 500;
+}
+
+body{
+    background-color: #FFF;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    padding: 32px 4vw;
+}
