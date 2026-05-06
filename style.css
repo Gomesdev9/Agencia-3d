@@ -25,10 +25,12 @@
 body{
     background-color: black;
     color: rgb(255, 255, 255, 0.9);
+    font-family: "inter";
 }
 
-h1,h2{
-    font-family: "Clash";
+h1,
+h2{
+    font-family: "Clash" sans-serif;
 }
 
 header{
@@ -73,8 +75,10 @@ header{
             position: absolute;
             width: 100%;
             top: 0;
-            left: 0;
             z-index: -1;
+        }
+        h3{
+            font-size: 16px;
         }
     }
 
