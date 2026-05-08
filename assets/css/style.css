@@ -208,5 +208,10 @@ header {
     h2{
         font-size: 9vw;
         position: absolute;
+        opacity: 0;
+    }
+
+    h2:nth-child(1){
+        opacity: 1;
     }
 }
