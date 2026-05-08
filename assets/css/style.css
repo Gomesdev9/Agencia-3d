@@ -6,19 +6,19 @@
 
 @font-face {
     font-family: "Clash";
-    src: url(fonts/ClashDisplay-Bold.ttf);
+    src: url(/assets/fonts/ClashDisplay-Bold.ttf);
     font-weight: 700;
 }
 
 @font-face {
     font-family: "Clash";
-    src: url(fonts/ClashDisplay-Medium.ttf);
+    src: url(/assets/fonts/ClashDisplay-Medium.ttf);
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Clash";
-    src: url(fonts/ClashDisplay-Regular.ttf);
+    src: url(/assets/fonts/ClashDisplay-Regular.ttf);
     font-weight: 400;
 }
 
