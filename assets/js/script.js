@@ -20,7 +20,9 @@ window.addEventListener("load" , ()=>{
         scrollTrigger: {
             trigger: ".transicao",
             markers: true,
-            scrub: true
+            scrub: true,
+            start: "0% 0%",
+            pin: true
         }
     })
 })
