@@ -14,16 +14,27 @@ window.addEventListener("load" , ()=>{
     videoFooter.loop = true;
     videoFooter.muted = true;
 
-    //quando rolo a pagina cada retangulo desce
-    gsa.to(".retangulos div", {
-        y: 0, 
+
+    const linhaDoTempo = gsap.timeline({
         scrollTrigger: {
             trigger: ".transicao",
             markers: true,
-            scrub: true,
+            scrub: 2,
             start: "0% 0%",
-            pin: true
-        }
+            pin: true,
+        },
     })
+    //quando rolo a pagina cada retangulo desce!
+    linhaDoTempo.to(".retangulos div", {
+        y: 0,
+        stagger: .08, 
+    })
+
+    linhaDoTempo.to(".secao2",{
+        opacity: 1
+    })
+    
 })
 
+
+// PLUGIN ScrollSmoother
