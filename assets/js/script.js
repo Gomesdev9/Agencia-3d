@@ -28,13 +28,21 @@ window.addEventListener("load" , ()=>{
     linhaDoTempo.to(".retangulos div", {
         y: 0,
         stagger: .08, 
-    })
+    });
 
     linhaDoTempo.to(".secao2",{
         opacity: 1
-    })
-    
-})
+    });
+
+    const Split = new SplitText(".secao2 h2", {
+        types: "chars"
+
+    });
+
+    linhaDoTempo.from(Split.chars,{  
+        y: 100
+    });
+});
 
 
 // PLUGIN ScrollSmoother
