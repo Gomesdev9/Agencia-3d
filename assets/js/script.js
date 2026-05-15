@@ -31,7 +31,7 @@ window.addEventListener("load" , ()=>{
         y: 0,
         stagger: 0.4,
         duration: 4
-    });
+    }, "-=.2");
     linhaDoTempo.to(".secao2",{
         opacity: 1,
         duration: 0.1
@@ -51,6 +51,7 @@ window.addEventListener("load" , ()=>{
             trigger: ".secao4",
             markers: false,
             scrub: 2,
+            end: "+=3000",
             pin: true
         }
     })
@@ -61,6 +62,8 @@ window.addEventListener("load" , ()=>{
         })
         linhaDoTempo2.from(split2.chars,{
             opacity: 0,
+            x:40,
+            filter:"blur(20px)",
             stagger: {
                 each: 0.2,
                 from: "random",
@@ -72,7 +75,7 @@ window.addEventListener("load" , ()=>{
                 each: 0.2,
                 from: "random",
             }
-        })
+        }, "+=2")
     });
 });
 
