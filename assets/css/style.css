@@ -216,6 +216,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    background-color: black;
 
     h2{
         font-size: 4vw;

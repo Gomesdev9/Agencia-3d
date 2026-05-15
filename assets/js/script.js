@@ -18,18 +18,18 @@ window.addEventListener("load" , ()=>{
     const linhaDoTempo = gsap.timeline({
         scrollTrigger: {
             trigger: ".transicao",
-            markers: true,
+            markers: true, //marcaçao visivel na visualizacao 
             scrub: 2,
-            start: "0% 0%",
-            end: "+=3000",
-            pin: true
+            start: "0% 0%", // inicio da acao!
+            end: "+=3000", 
+            pin: true //fixacao na pagina = true
         },
     })
 
     //quando rolo a pagina cada retangulo desce!
     linhaDoTempo.to(".retangulos div", {
         y: 0,
-        stagger: 0.2,
+        stagger: 0.4,
         duration: 4
     });
     linhaDoTempo.to(".secao2",{
@@ -44,6 +44,24 @@ window.addEventListener("load" , ()=>{
         y: 100,
         stagger: 0.1,
         duration:1
+    });
+
+    const linhaDoTempo2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".secao4",
+            markers: true,
+            scrub: 2,
+            pin: true
+        }
+    })
+    const textosSecao4 = document.querySelectorAll(".secao4 h2")
+    textosSecao4.forEach(texto => {
+        linhaDoTempo2.to(texto,{
+            opacity: 1
+        })
+        linhaDoTempo2.to(texto,{
+            opacity: 0
+        })
     });
 });
 
