@@ -87,13 +87,16 @@ window.addEventListener("load" , ()=>{
         1000
     );
 
+    camera.position.z = 4;
+
     const renderizador = new THREE.WebGLRenderer();
     renderizador.setSize(
         window.innerWidth,
         window.innerHeight
     );
 
-
+    const divDiamante = document.querySelector("secao4 .divDiamante");
+    divDiamante.appendChild(renderizador)
 });
 
 
