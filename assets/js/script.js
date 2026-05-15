@@ -89,18 +89,25 @@ window.addEventListener("load" , ()=>{
     );
 
     camera.position.z = 4;
-
+    //Renderizador
     const renderizador = new THREE.WebGLRenderer();
-    renderizador.setSize(
-        window.innerWidth,
-        window.innerHeight
-    );
-
+    renderizador.setSize(window.innerWidth, window.innerHeight);
+    const divDiamante = document.querySelector(".divDiamante");
+    divDiamante.appendChild(renderizador.domElement);
+    
+    //Inserir modelo 3d
     const gltfLoader = new GLTFLoader();
+    gltfLoader.load("assets/img/diamond-compressed.glb",(objeto)=>{
+        const diamante = objeto.scene
+        cena.add(diamante);
+    });
 
+    function animar(){
+        renderizador.render(cena, camera);
+        requestAnimationFrame(animar)
+    }
 
-    const divDiamante = document.querySelector("secao4 .divDiamante");
-    divDiamante.appendChild(renderizador)
+    animar()
 });
 
 
