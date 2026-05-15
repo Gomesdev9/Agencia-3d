@@ -49,7 +49,7 @@ window.addEventListener("load" , ()=>{
     const linhaDoTempo2 = gsap.timeline({
         scrollTrigger: {
             trigger: ".secao4",
-            markers: true,
+            markers: false,
             scrub: 2,
             pin: true
         }
@@ -59,11 +59,19 @@ window.addEventListener("load" , ()=>{
         const split2 = new SplitText(textoH2,{
             types:"chars"
         })
-        linhaDoTempo2.to(split2.chars,{
-            opacity: 1
+        linhaDoTempo2.from(split2.chars,{
+            opacity: 0,
+            stagger: {
+                each: 0.2,
+                from: "random",
+            }
         })
         linhaDoTempo2.to(split2.chars,{
-            opacity: 0
+            opacity: 0,
+            stagger: {
+                each: 0.2,
+                from: "random",
+            }
         })
     });
 });
