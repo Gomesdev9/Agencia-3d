@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 window.addEventListener("load" , ()=>{
@@ -94,6 +95,9 @@ window.addEventListener("load" , ()=>{
         window.innerWidth,
         window.innerHeight
     );
+
+    const gltfLoader = new GLTFLoader();
+
 
     const divDiamante = document.querySelector("secao4 .divDiamante");
     divDiamante.appendChild(renderizador)
