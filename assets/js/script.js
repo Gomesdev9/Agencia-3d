@@ -55,11 +55,14 @@ window.addEventListener("load" , ()=>{
         }
     })
     const textosSecao4 = document.querySelectorAll(".secao4 h2")
-    textosSecao4.forEach(texto => {
-        linhaDoTempo2.to(texto,{
+    textosSecao4.forEach(textoH2 => {
+        const split2 = new SplitText(textoH2,{
+            types:"chars"
+        })
+        linhaDoTempo2.to(split2.chars,{
             opacity: 1
         })
-        linhaDoTempo2.to(texto,{
+        linhaDoTempo2.to(split2.chars,{
             opacity: 0
         })
     });
