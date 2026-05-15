@@ -21,26 +21,29 @@ window.addEventListener("load" , ()=>{
             markers: true,
             scrub: 2,
             start: "0% 0%",
-            pin: true,
+            end: "+=3000",
+            pin: true
         },
     })
+
     //quando rolo a pagina cada retangulo desce!
     linhaDoTempo.to(".retangulos div", {
         y: 0,
-        stagger: .08, 
+        stagger: 0.2,
+        duration: 4
     });
-
     linhaDoTempo.to(".secao2",{
-        opacity: 1
+        opacity: 1,
+        duration: 0.1
     });
-
     const Split = new SplitText(".secao2 h2", {
-        types: "chars"
-
+        types: "chars",
+        mask: "lines"
     });
-
     linhaDoTempo.from(Split.chars,{  
-        y: 100
+        y: 100,
+        stagger: 0.1,
+        duration:1
     });
 });
 
