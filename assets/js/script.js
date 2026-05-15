@@ -1,7 +1,7 @@
+import * as THREE from 'three';
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+
 window.addEventListener("load" , ()=>{
-
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
-
     const videoHero = document.querySelector(".hero video");
     const videoFooter = document.querySelector("footer video");
     videoHero.src = "./assets/img/video-hero.mp4"
@@ -13,7 +13,6 @@ window.addEventListener("load" , ()=>{
     videoFooter.autoplay = true;
     videoFooter.loop = true;
     videoFooter.muted = true;
-
 
     const linhaDoTempo = gsap.timeline({
         scrollTrigger: {
@@ -56,6 +55,7 @@ window.addEventListener("load" , ()=>{
         }
     })
     const textosSecao4 = document.querySelectorAll(".secao4 h2")
+
     textosSecao4.forEach(textoH2 => {
         const split2 = new SplitText(textoH2,{
             types:"chars"
@@ -77,6 +77,23 @@ window.addEventListener("load" , ()=>{
             }
         }, "+=2")
     });
+    //cena
+    const cena = new THREE.Scene();
+    //camera
+    const camera = new THREE.PerspectiveCamera(
+        40,
+        window.innerWidth/window.innerHeight,
+        0.1,
+        1000
+    );
+
+    const renderizador = new THREE.WebGLRenderer();
+    renderizador.setSize(
+        window.innerWidth,
+        window.innerHeight
+    );
+
+
 });
 
 
