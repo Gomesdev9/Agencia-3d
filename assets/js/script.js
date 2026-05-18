@@ -48,7 +48,7 @@ window.addEventListener("load" , ()=>{
 
     const linhaDoTempo2 = gsap.timeline({
         scrollTrigger: {
-            trigger: ".secao4",
+            trigger: ".transicao2",
             markers: false,
             scrub: 2,
             end: "+=3000",
@@ -111,7 +111,8 @@ window.addEventListener("load" , ()=>{
             trigger: ".transicao2",
             markers: false,
             scrub: 2,
-            end: "+=3600"
+            start:
+            end: "+=4000"
             }         
         })
 
@@ -132,7 +133,7 @@ window.addEventListener("load" , ()=>{
 
         linhaDoTempo3.to("footer", {
             opacity: 1,
-            duration: .5
+            duration: .3
         })
         
         cena.add(diamante);
