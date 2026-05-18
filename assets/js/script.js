@@ -99,16 +99,19 @@ window.addEventListener("load" , ()=>{
     divDiamante.appendChild(renderizador.domElement);
     
     //Inserir modelo 3d
+    let diamante = null
     const gltfLoader = new GLTFLoader();
     gltfLoader.load("assets/img/diamond-compressed.glb",(objeto)=>{
-        const diamante = objeto.scene;
+        diamante = objeto.scene;
         diamante.position.z = -10;
         diamante.position.y = 2;
+
+        
         
         cena.add(diamante);
     });
 
-    //INSERIR TEXTURA
+    //INSERIR TEXTURA 
     const textLoader = new THREE.TextureLoader();
     textLoader.load("assets/img/hdri.webp", (texturaCarregada)=>{
     texturaCarregada.mapping = THREE.EquirectangularReflectionMapping;
@@ -119,6 +122,11 @@ window.addEventListener("load" , ()=>{
 
     
     function animar(){
+
+
+        if(diamante !== null){
+            diamante.rotation.x = diamante.rotation.x +0.08
+        }
         renderizador.render(cena, camera);
         requestAnimationFrame(animar)
     }
