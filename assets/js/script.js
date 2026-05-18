@@ -116,12 +116,16 @@ window.addEventListener("load" , ()=>{
         })
 
         linhaDoTempo3.to(diamante.position, {
-            y: -2,
+            y: 0,
         })
 
         linhaDoTempo3.to(diamante.rotation, {
-            x: 6
+            x: 4.6
         },"<")
+
+        linhaDoTempo3.to(diamante.position,{
+            z: 3.5,
+        })
         
         cena.add(diamante);
     });
@@ -140,7 +144,7 @@ window.addEventListener("load" , ()=>{
 
 
         if(diamante !== null){
-            diamante.rotation.x = diamante.rotation.x +0.08
+            diamante.rotation.x = diamante.rotation.x + 0.01
         }
         renderizador.render(cena, camera);
         requestAnimationFrame(animar)
