@@ -106,7 +106,22 @@ window.addEventListener("load" , ()=>{
         diamante.position.z = -10;
         diamante.position.y = 2;
 
-        
+        const linhaDoTempo3 = gsap.timeline({
+            scrollTrigger: {
+            trigger: ".secao4",
+            markers: false,
+            scrub: 2,
+            end: "+=3000"
+            }         
+        })
+
+        linhaDoTempo3.to(diamante.position, {
+            y: -2,
+        })
+
+        linhaDoTempo3.to(diamante.rotation, {
+            x: 6
+        },"<")
         
         cena.add(diamante);
     });
