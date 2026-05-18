@@ -284,6 +284,8 @@ header {
         flex-direction: row;
         align-items: end;
         justify-content: space-around;
+        z-index: 2;
+        opacity: 0;
 
         .bg {
             position: absolute;

@@ -103,28 +103,36 @@ window.addEventListener("load" , ()=>{
     const gltfLoader = new GLTFLoader();
     gltfLoader.load("assets/img/diamond-compressed.glb",(objeto)=>{
         diamante = objeto.scene;
-        diamante.position.z = -8;
+        diamante.position.z = -10;
         diamante.position.y = 2;
 
         const linhaDoTempo3 = gsap.timeline({
             scrollTrigger: {
-            trigger: ".secao4",
+            trigger: ".transicao2",
             markers: false,
             scrub: 2,
-            end: "+=3000"
+            end: "+=3600"
             }         
         })
 
         linhaDoTempo3.to(diamante.position, {
             y: 0,
+            duration: 2
         })
 
         linhaDoTempo3.to(diamante.rotation, {
             x: 4.6,
+            duration: 2
         },"<")
 
         linhaDoTempo3.to(diamante.position,{
-            z: 3.5,
+            z: 3.3,
+            duration: .3
+        })
+
+        linhaDoTempo3.to("footer", {
+            opacity: 1,
+            duration: .5
         })
         
         cena.add(diamante);
@@ -144,7 +152,7 @@ window.addEventListener("load" , ()=>{
 
 
         if(diamante !== null){
-            diamante.rotation.x = diamante.rotation.x + 0.01
+            diamante.rotation.y = diamante.rotation.y + 0.01
         }
         renderizador.render(cena, camera);
         requestAnimationFrame(animar)
