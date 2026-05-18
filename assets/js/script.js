@@ -103,7 +103,7 @@ window.addEventListener("load" , ()=>{
     const gltfLoader = new GLTFLoader();
     gltfLoader.load("assets/img/diamond-compressed.glb",(objeto)=>{
         diamante = objeto.scene;
-        diamante.position.z = -10;
+        diamante.position.z = -8;
         diamante.position.y = 2;
 
         const linhaDoTempo3 = gsap.timeline({
@@ -120,7 +120,7 @@ window.addEventListener("load" , ()=>{
         })
 
         linhaDoTempo3.to(diamante.rotation, {
-            x: 4.6
+            x: 4.6,
         },"<")
 
         linhaDoTempo3.to(diamante.position,{
