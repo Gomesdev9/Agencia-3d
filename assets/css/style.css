@@ -248,8 +248,8 @@ header {
     flex-direction: column;
 
     .divDiamante{
-        z-index: -2;
-        
+        z-index: 2;
+
     }
 
     h2{

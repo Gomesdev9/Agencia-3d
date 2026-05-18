@@ -83,7 +83,7 @@ window.addEventListener("load" , ()=>{
     //camera
     const camera = new THREE.PerspectiveCamera(
         40,
-        window.innerWidth/window.innerHeight,
+        window.innerWidth / window.innerHeight,
         0.1,
         1000
     );
@@ -101,8 +101,9 @@ window.addEventListener("load" , ()=>{
     //Inserir modelo 3d
     const gltfLoader = new GLTFLoader();
     gltfLoader.load("assets/img/diamond-compressed.glb",(objeto)=>{
-        const diamante = objeto.scene
-        diamante.position.z = -4
+        const diamante = objeto.scene;
+        diamante.position.z = -10;
+        diamante.position.y = 2;
         
         cena.add(diamante);
     });
