@@ -18,7 +18,7 @@ window.addEventListener("load" , ()=>{
     const linhaDoTempo = gsap.timeline({
         scrollTrigger: {
             trigger: ".transicao",
-            markers: true, //marcaçao visivel na visualizacao 
+            markers: false, //marcaçao visivel na visualizacao 
             scrub: 2,
             start: "0% 0%", // inicio da acao!
             end: "+=3000", 
@@ -90,7 +90,10 @@ window.addEventListener("load" , ()=>{
 
     camera.position.z = 4;
     //Renderizador
-    const renderizador = new THREE.WebGLRenderer();
+    const renderizador = new THREE.WebGLRenderer({
+        alpha: true,
+        antialias: true
+    });
     renderizador.setSize(window.innerWidth, window.innerHeight);
     const divDiamante = document.querySelector(".divDiamante");
     divDiamante.appendChild(renderizador.domElement);
@@ -99,6 +102,8 @@ window.addEventListener("load" , ()=>{
     const gltfLoader = new GLTFLoader();
     gltfLoader.load("assets/img/diamond-compressed.glb",(objeto)=>{
         const diamante = objeto.scene
+        diamante.position.z = -4
+        
         cena.add(diamante);
     });
 

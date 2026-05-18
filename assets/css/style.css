@@ -247,6 +247,11 @@ header {
     justify-content: center;
     flex-direction: column;
 
+    .divDiamante{
+        z-index: -2;
+        
+    }
+
     h2{
         font-size: 9vw;
         position: absolute;
