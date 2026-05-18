@@ -103,13 +103,12 @@ window.addEventListener("load" , ()=>{
     });
 
     //INSERIR TEXTURA
-
-    const textLoader = new THREE.textureLoader();
+    const textLoader = new THREE.TextureLoader();
     textLoader.load("assets/img/hdri.webp", (texturaCarregada)=>{
     texturaCarregada.mapping = THREE.EquirectangularReflectionMapping;
     const pmrem = new THREE.PMREMGenerator(renderizador);
-    const env = pmrem.fromEquirectangular(texturaCarregada).texture;
-    
+    const ambiente = pmrem.fromEquirectangular(texturaCarregada).texture;
+    cena.environment = ambiente
     })
 
     
