@@ -102,6 +102,17 @@ window.addEventListener("load" , ()=>{
         cena.add(diamante);
     });
 
+    //INSERIR TEXTURA
+
+    const textLoader = new THREE.textureLoader();
+    textLoader.load("assets/img/hdri.webp", (texturaCarregada)=>{
+    texturaCarregada.mapping = THREE.EquirectangularReflectionMapping;
+    const pmrem = new THREE.PMREMGenerator(renderizador);
+    const env = pmrem.fromEquirectangular(texturaCarregada).texture;
+    
+    })
+
+    
     function animar(){
         renderizador.render(cena, camera);
         requestAnimationFrame(animar)
@@ -111,4 +122,3 @@ window.addEventListener("load" , ()=>{
 });
 
 
-// PLUGIN ScrollSmoother
