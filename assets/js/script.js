@@ -111,7 +111,7 @@ window.addEventListener("load" , ()=>{
             trigger: ".transicao2",
             markers: false,
             scrub: 2,
-            end: "+=4000"
+            end: "+=3800"
             }         
         })
 
