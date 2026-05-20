@@ -246,8 +246,10 @@ header {
 
 .transicao2 {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
 
 
     .secao4 {
@@ -260,7 +262,6 @@ header {
 
         .divDiamante {
             z-index: 2;
-
         }
 
         h2 {
