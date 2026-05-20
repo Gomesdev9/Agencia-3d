@@ -21,7 +21,7 @@ window.addEventListener("load" , ()=>{
             markers: false, //marcaçao visivel na visualizacao 
             scrub: 2,
             start: "0% 0%", // inicio da acao!
-            end: "+=3000", 
+            end: "+=3800", 
             pin: true //fixacao na pagina = true
         },
     })
@@ -32,6 +32,7 @@ window.addEventListener("load" , ()=>{
         stagger: 0.4,
         duration: 4
     }, "-=.2");
+
     linhaDoTempo.to(".secao2",{
         opacity: 1,
         duration: 0.1
@@ -45,6 +46,11 @@ window.addEventListener("load" , ()=>{
         stagger: 0.1,
         duration:1
     });
+
+    linhaDoTempo.to({ },
+    { 
+        duration: 2
+    })
 
     const linhaDoTempo2 = gsap.timeline({
         scrollTrigger: {
@@ -110,6 +116,7 @@ window.addEventListener("load" , ()=>{
             scrollTrigger: {
             trigger: ".transicao2",
             markers: false,
+            start: "top bottom",
             scrub: 2,
             end: "+=3800"
             }         

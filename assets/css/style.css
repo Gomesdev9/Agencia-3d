@@ -347,3 +347,23 @@ header {
 
     }
 }
+
+@media (max-width: 767px){
+    .hero {
+        .conteudo{
+            padding: 0;
+            h2{
+                font-size: 6vw;
+            }
+            p{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width: 600) {
+    .botoes{
+        flex-direction: column;
+    }
+}
