@@ -111,7 +111,7 @@ Agencia/
 
 1. **Clone o repositório**
    ```bash
-   git clone https://github.com/seu-usuario/agencia-3d.git
+   git clone https://github.com/Gomesdev9/agencia-3d.git
    cd agencia-3d
    ```
 
@@ -266,7 +266,7 @@ Contribuições são bem-vindas! Para contribuir:
 
 ## 📞 Contato
 
-- 📧 Email: [contato@webhub.com]
+- 📧 Email: []
 - 🌐 Website: [www.webhub.com]
 - 💼 LinkedIn: [/company/webhub]
 - 📱 Instagram: [@webhub_agency]
