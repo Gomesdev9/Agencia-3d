@@ -46,12 +46,6 @@ window.addEventListener("load" , ()=>{
         stagger: 0.1,
         duration:1
     });
-
-    linhaDoTempo.to({ },
-    { 
-        duration: 2
-    })
-
     const linhaDoTempo2 = gsap.timeline({
         scrollTrigger: {
             trigger: ".transicao2",
